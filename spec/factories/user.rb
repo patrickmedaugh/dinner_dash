@@ -12,6 +12,8 @@ FactoryGirl.define do
     first_name "John"
     last_name  "Smith"
     username   "jsmith"
+    email      "j@smith.com"
+    password   "password"
     role      1
   end
 end
