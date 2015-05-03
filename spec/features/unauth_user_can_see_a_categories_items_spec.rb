@@ -2,10 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'unauthenticated user' do
   it 'can see a list of all items in a category' do
-    category = create(:category)
-    item = create(:item)
-    #need to associate this item with this category
-    visit category_path(category)
-    expect(page).to have_content("Metapod")
+    item = create(:item_with_categories)
+    visit category_path(item.categories.first)
+    expect(page).to have_content("Pikachu")
   end
 end

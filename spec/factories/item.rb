@@ -6,4 +6,8 @@ FactoryGirl.define do
              price 900
     end
 
+    factory :item_with_categories, :parent => :item do
+      categories {[FactoryGirl.create(:category)]}
+    end
+
 end
